@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import './App.scss';
+import People from './pages/People';
+import Planets from "./pages/Planets";
+import Starships from "./pages/Starships";
+import Header from './partials/Header/Header';
+
+const API_URL = "https://swapi.co/api";
+
+
 
 function App() {
   return (
+  <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Switch>
+        <Route exact path="/" render={(props) => <People apiUrl={API_URL}/>} />
+        <Route path="/planets" render={(props) => <Planets apiUrl={API_URL}/>} />
+        <Route path="/starships" render={(props) => <Starships apiUrl={API_URL}/>} />
+      </Switch>
     </div>
+  </Router>
   );
 }
 

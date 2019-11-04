@@ -7,7 +7,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,5 +18,15 @@
 }
 
 .App-link {
-  color: #09d3ac;
+  color: #fee81f;
+}
+
+
+.react-tabs__tab-list {
+  display: flex;
+  li {
+    list-style: none;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
 }
