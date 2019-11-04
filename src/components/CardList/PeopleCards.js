@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './CardList.scss';
+import {  Link } from "react-router-dom";
+import {getIdFromURL} from '../../helpers/helpers';
 
 
 
@@ -25,7 +27,9 @@ class PersonCard extends Component {
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Gender:  <div>{person.gender}</div> </li>
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Height:  <div>{person.height}</div> </li>
                         </ul>
-                        <div className="btn btn-primary btn-sm">Go somewhere</div>
+                        <Link className="btn btn-primary btn-sm" to={`/people/${getIdFromURL(person.url)}`}>
+                            Go somewhere
+                        </Link>
                     </div>
                 </div>
             </div>
