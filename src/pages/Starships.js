@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
-import StarshipCard from "../components/CardList/StarshipCard";
+import StarshipCards from "../components/CardList/StarshipCards";
 
 
 class Starships extends Component {
@@ -52,7 +52,7 @@ class Starships extends Component {
                             <React.Fragment>
                                 <h5 className="mb-4">Results: {this.state.count}</h5>
                                 <div className="row">
-                                    <StarshipCard starships={this.state.starships}/>
+                                    <StarshipCards starships={this.state.starships}/>
                                 </div>
                             </React.Fragment>
                     }
