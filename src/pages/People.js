@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
-import PersonCard from "../components/CardList/PersonCard.js";
+import PeopleCards from "../components/CardList/PeopleCards";
 
 
 class People extends Component {
@@ -50,7 +50,7 @@ class People extends Component {
                             <React.Fragment>
                                 <h5 className="mb-4">Results: {this.state.count}</h5>
                                 <div className="row">
-                                    <PersonCard people={this.state.people}/>
+                                    <PeopleCards people={this.state.people}/>
                                 </div>
                             </React.Fragment>
                     }

@@ -6,6 +6,10 @@ import './CardList.scss';
 class PersonCard extends Component {
 
     renderCard() {
+
+        if (!this.props.people.length) {
+            return <div className="col text-center"><h2>No Residents</h2></div>
+        }
         return this.props.people.map(function(person, index){
             return (
             <div key={index} className="col-sm-6 col-md-4 col-xl-3 mb-4">

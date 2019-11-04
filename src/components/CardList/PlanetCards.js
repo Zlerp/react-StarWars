@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import './CardList.scss';
+import {  Link } from "react-router-dom";
+import {getIdFromURL} from '../../helpers/helpers';
 
 
 
-class PlanetCard extends Component {
+class PlanetCards extends Component {
 
     renderCard() {
         return this.props.planets.map(function(planet, index){
@@ -20,7 +22,9 @@ class PlanetCard extends Component {
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Diameter: <div>{planet.diameter}</div></li>
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Gravity: <div>{planet.gravity}</div></li>
                         </ul>
-                        <div className="btn btn-primary btn-sm">Go somewhere</div>
+                        <Link className="btn btn-primary btn-sm" to={`/planets/${getIdFromURL(planet.url)}`}>
+                            Go somewhere
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -40,6 +44,6 @@ class PlanetCard extends Component {
     }
 }
 
-PlanetCard.propTypes = {};
+PlanetCards.propTypes = {};
 
-export default PlanetCard;
+export default PlanetCards;

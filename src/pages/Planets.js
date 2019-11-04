@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
-import PlanetCard from "../components/CardList/PlanetCard";
+import PlanetCards from "../components/CardList/PlanetCards";
 
 
 class Planets extends Component {
@@ -51,7 +51,7 @@ class Planets extends Component {
                             <React.Fragment>
                                 <h5 className="mb-4">Results: {this.state.count}</h5>
                                 <div className="row">
-                                    <PlanetCard planets={this.state.planets}/>
+                                    <PlanetCards planets={this.state.planets}/>
                                 </div>
                             </React.Fragment>
                     }
