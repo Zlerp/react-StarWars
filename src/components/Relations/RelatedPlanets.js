@@ -5,13 +5,13 @@ import PlanetCards from '../CardList/PlanetCards';
 import 'react-tabs/style/react-tabs.css';
 
 
-class RelatedPlanet extends Component {
+class RelatedPlanets extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            planet: []
+            planets: []
         };
         this.requestApi = this.requestApi.bind(this);
 
@@ -24,9 +24,9 @@ class RelatedPlanet extends Component {
         axios.get(url).then(response => response.data)
             .then((data) => {
                 this.setState({
-                    planet:  [data],
+                    planets:  this.state.planets.concat(data),
                 });
-                console.log(this.state.planet);
+                console.log(this.state.planets);
             })
     }
 
@@ -34,7 +34,9 @@ class RelatedPlanet extends Component {
 
     componentDidMount() {
         let self = this;
-        this.requestApi(this.props.planetUrl)
+        this.props.planetUrls.map(function(planet, index){
+            self.requestApi(planet)
+        });
     }
 
 
@@ -43,7 +45,7 @@ class RelatedPlanet extends Component {
             <div className="">
                 <div className="container">
                     <div className="row">
-                        <PlanetCards planets={this.state.planet} />
+                        <PlanetCards planets={this.state.planets} />
                     </div>
                 </div>
             </div>
@@ -52,4 +54,4 @@ class RelatedPlanet extends Component {
 
 }
 
-export default RelatedPlanet;
+export default RelatedPlanets;

@@ -5,16 +5,17 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import RelatedPlanets from "../../components/Relations/RelatedPlanets";
 import RelatedStarships from "../../components/Relations/RelatedStarships";
+import RelatedPeople from "../../components/Relations/RelatedPeople";
 
 
-class Person extends Component {
+class Film extends Component {
 
     constructor(props) {
         super(props);
 
 
         this.state = {
-            person : {},
+            film : {},
         };
     }
 
@@ -24,16 +25,16 @@ class Person extends Component {
         axios.get(url).then(response => response.data)
             .then((data) => {
                 this.setState({
-                    person:  data,
+                    film:  data,
                 });
-                console.log(this.state.person);
+                console.log(this.state.film);
             })
     }
 
 
     componentDidMount() {
-        this.requestApi(`${this.props.apiUrl}/people/${this.props.id}`);
-        console.log(`${this.props.apiUrl}/people/${this.props.id}`);
+        this.requestApi(`${this.props.apiUrl}/films/${this.props.id}`);
+        console.log(`${this.props.apiUrl}/films/${this.props.id}`);
 
 
     }
@@ -43,12 +44,12 @@ class Person extends Component {
         return (
             <div className="">
                 <div className="container">
-                    <h1>Person: {this.state.person.name}</h1>
+                    <h1>Title: {this.state.film.title}</h1>
                     <Tabs>
                         <TabList>
                             <Tab>Details</Tab>
-                            <Tab>Home World</Tab>
-                            <Tab>Films</Tab>
+                            <Tab>Characters</Tab>
+                            <Tab>Planets</Tab>
                             <Tab>Species</Tab>
                             <Tab>Starships</Tab>
                             <Tab>Vehicles</Tab>
@@ -56,26 +57,24 @@ class Person extends Component {
 
                         <TabPanel>
                             <React.Fragment>
-                                <div>  Birth Year: {this.state.person.birth_year}</div>
-                                <div>Height: {this.state.person.height}</div>
-                                <div>Mass: {this.state.person.mass}</div>
-                                <div>Hair Color: {this.state.person.hair_color}</div>
-                                <div>Eye Color: {this.state.person.eye_color}</div>
-                                <div>Gender: {this.state.person.gender}</div>
-                                <div>Skin Color: {this.state.person.skin_color}</div>
+                                <div >Director: {this.state.film.director}</div>
+                                <div >Episode: {this.state.film.episode_id}</div>
+                                <div >Release Date: {this.state.film.release_date}</div>
+                                <div >Producer/s: {this.state.film.producer}</div>
+                                <div >Opening Crawl: {this.state.film.opening_crawl}</div>
                             </React.Fragment>
                         </TabPanel>
                         <TabPanel>
-                            <RelatedPlanets planetUrls={this.state.person.homeworld}/>
+                            <RelatedPeople peopleUrls={this.state.film.characters}/>
                         </TabPanel>
                         <TabPanel>
-                            <h2>Films</h2>
+                            <RelatedPlanets planetUrls={this.state.film.planets}/>
                         </TabPanel>
                         <TabPanel>
                             <h2>Species</h2>
                         </TabPanel>
                         <TabPanel>
-                            <RelatedStarships starshipsUrl={this.state.person.starships}/>
+                            <RelatedStarships starshipsUrl={this.state.film.starships}/>
                         </TabPanel>
                         <TabPanel>
                             <h2>Vehicles</h2>
@@ -90,4 +89,4 @@ class Person extends Component {
 
 }
 
-export default Person;
+export default Film;
