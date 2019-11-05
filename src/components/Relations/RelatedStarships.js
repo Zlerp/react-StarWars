@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import StarshipCards from '../CardList/StarshipCards';
-import 'react-tabs/style/react-tabs.css';
 
 
 class RelatedStarships extends Component {

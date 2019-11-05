@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import FilmCards from '../CardList/FilmCards';
-import 'react-tabs/style/react-tabs.css';
 
 
 class RelatedFilms extends Component {

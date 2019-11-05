@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import PlanetCards from '../CardList/PlanetCards';
-import 'react-tabs/style/react-tabs.css';
 
 
 class RelatedPlanets extends Component {
