@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import RelatedPlanet from "../../components/Relations/RelatedPlanet";
 // import RelatedPeople from "../../components/Relations/RelatedPeople";
 
 
@@ -66,8 +67,7 @@ class Person extends Component {
                             </React.Fragment>
                         </TabPanel>
                         <TabPanel>
-                            <h2>Home World</h2>
-                            {/*<RelatedPeople peopleUrls={this.state.planet.residents}/>*/}
+                            <RelatedPlanet planetUrl={this.state.person.homeworld}/>
                         </TabPanel>
                         <TabPanel>
                             <h2>Films</h2>

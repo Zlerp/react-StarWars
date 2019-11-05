@@ -8,6 +8,9 @@ import {getIdFromURL} from '../../helpers/helpers';
 class PlanetCards extends Component {
 
     renderCard() {
+        if (!this.props.planets.length) {
+            return <div className="col text-center"><h2>No Planet</h2></div>
+        }
         return this.props.planets.map(function(planet, index){
             return (
             <div key={index} className="col-sm-6 col-md-4 col-xl-3 mb-4">
