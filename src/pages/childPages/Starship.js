@@ -4,7 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import RelatedPeople from "../../components/Relations/RelatedPeople";
 import RelatedFilms from "../../components/Relations/RelatedFilms";
-
+import './childPages.scss';
 
 class Starship extends Component {
 

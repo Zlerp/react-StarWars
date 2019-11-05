@@ -5,7 +5,7 @@ import 'react-tabs/style/react-tabs.css';
 import RelatedPlanets from "../../components/Relations/RelatedPlanets";
 import RelatedStarships from "../../components/Relations/RelatedStarships";
 import RelatedPeople from "../../components/Relations/RelatedPeople";
-
+import './childPages.scss';
 
 class Film extends Component {
 
