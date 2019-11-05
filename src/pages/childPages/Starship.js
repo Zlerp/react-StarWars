@@ -25,14 +25,12 @@ class Starship extends Component {
                 this.setState({
                     starship:  data,
                 });
-                console.log(this.state.starship);
             })
     }
 
 
     componentDidMount() {
         this.requestApi(`${this.props.apiUrl}/starships/${this.props.id}`);
-        console.log(`${this.props.apiUrl}/starships/${this.props.id}`);
 
 
     }

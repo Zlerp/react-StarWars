@@ -28,14 +28,12 @@ class Film extends Component {
                 this.setState({
                     film:  data,
                 });
-                console.log(this.state.film);
             })
     }
 
 
     componentDidMount() {
         this.requestApi(`${this.props.apiUrl}/films/${this.props.id}`);
-        console.log(`${this.props.apiUrl}/films/${this.props.id}`);
 
 
     }

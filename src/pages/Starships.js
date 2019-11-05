@@ -21,7 +21,6 @@ class Starships extends Component {
                     count: data.count,
                 }));
 
-                console.log(this.state.starships);
                 if (data.next) {
                     this.requestApi(data.next);
                 } else {

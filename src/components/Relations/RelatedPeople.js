@@ -23,7 +23,6 @@ class RelatedPeople extends Component {
                 this.setState({
                     people:  this.state.people.concat(data),
                 });
-                console.log(this.state.people);
             })
     }
 

@@ -25,15 +25,12 @@ class Vehicle extends Component {
                 this.setState({
                     vehicle:  data,
                 });
-                console.log(this.state.vehicle);
             })
     }
 
 
     componentDidMount() {
         this.requestApi(`${this.props.apiUrl}/vehicles/${this.props.id}`);
-        console.log(`${this.props.apiUrl}/vehicles/${this.props.id}`);
-
 
     }
 

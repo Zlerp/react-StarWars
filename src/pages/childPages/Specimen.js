@@ -27,15 +27,12 @@ class Specimen extends Component {
                 this.setState({
                     specimen:  data,
                 });
-                console.log(this.state.specimen);
             })
     }
 
 
     componentDidMount() {
         this.requestApi(`${this.props.apiUrl}/species/${this.props.id}`);
-        console.log(`${this.props.apiUrl}/species/${this.props.id}`);
-
 
     }
 

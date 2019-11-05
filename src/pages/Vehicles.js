@@ -21,7 +21,6 @@ class Vehicles extends Component {
                     count: data.count,
                 }));
 
-                console.log(this.state.vehicles);
                 if (data.next) {
                     this.requestApi(data.next);
                 } else {

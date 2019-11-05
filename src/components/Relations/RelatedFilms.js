@@ -23,7 +23,6 @@ class RelatedFilms extends Component {
                 this.setState({
                     films:  this.state.films.concat(data),
                 });
-                console.log(this.state.films);
             })
     }
 

@@ -26,15 +26,12 @@ class Planet extends Component {
                 this.setState({
                     planet:  data,
                 });
-                console.log(this.state.planet);
             })
     }
 
 
     componentDidMount() {
         this.requestApi(`${this.props.apiUrl}/planets/${this.props.id}`);
-        console.log(`${this.props.apiUrl}/planets/${this.props.id}`);
-
 
     }
 

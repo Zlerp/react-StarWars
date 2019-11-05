@@ -19,13 +19,11 @@ class RelatedStarships extends Component {
 
 
     requestApi(url) {
-        console.log(url);
         axios.get(url).then(response => response.data)
             .then((data) => {
                 this.setState({
                     starships:  this.state.starships.concat(data),
                 });
-                console.log('Hello!', this.state.starships);
             })
     }
 

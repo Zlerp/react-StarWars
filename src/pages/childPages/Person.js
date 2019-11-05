@@ -28,14 +28,12 @@ class Person extends Component {
                 this.setState({
                     person:  data,
                 });
-                console.log(this.state.person);
             })
     }
 
 
     componentDidMount() {
         this.requestApi(`${this.props.apiUrl}/people/${this.props.id}`);
-        console.log(`${this.props.apiUrl}/people/${this.props.id}`);
 
 
     }

@@ -20,7 +20,6 @@ class Planets extends Component {
                     planets:  this.state.planets.concat(data.results),
                     count: data.count,
                 }));
-                console.log(this.state.planets);
                 if (data.next) {
                     this.requestApi(data.next);
                 } else {

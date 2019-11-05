@@ -20,7 +20,6 @@ class Header extends Component {
         this.setState({
             collapsed: !this.state.collapsed
         });
-        console.log(this.state.collapsed);
     }
 
     closeNavbar() {

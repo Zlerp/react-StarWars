@@ -29,7 +29,6 @@ class Species extends Component {
                     })
                 }
 
-                console.log(this.state.species);
             })
     }
 

@@ -23,7 +23,6 @@ class RelatedSpecies extends Component {
                 this.setState({
                     species:  this.state.species.concat(data),
                 });
-                console.log(this.state.species);
             })
     }
 

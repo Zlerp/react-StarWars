@@ -19,13 +19,11 @@ class RelatedPlanets extends Component {
 
 
     requestApi(url) {
-        console.log(url);
         axios.get(url).then(response => response.data)
             .then((data) => {
                 this.setState({
                     planets:  this.state.planets.concat(data),
                 });
-                console.log(this.state.planets);
             })
     }
 
@@ -33,7 +31,6 @@ class RelatedPlanets extends Component {
 
     componentDidMount() {
         let self = this;
-        console.log(this.props.planetUrls);
         this.props.planetUrls.map(function(planet, index){
             self.requestApi(planet)
         });

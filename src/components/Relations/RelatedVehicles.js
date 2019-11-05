@@ -20,13 +20,12 @@ class RelatedVehicles extends Component {
 
 
     requestApi(url) {
-        console.log(url);
+
         axios.get(url).then(response => response.data)
             .then((data) => {
                 this.setState({
                     vehicles:  this.state.vehicles.concat(data),
                 });
-                console.log('Hello!', this.state.vehicles);
             })
     }
 
