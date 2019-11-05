@@ -12,6 +12,8 @@ import People from './pages/People';
 import Planets from "./pages/Planets";
 import Starships from "./pages/Starships";
 import Films from "./pages/Films";
+import Vehicles from "./pages/Vehicles";
+import Vehicle from "./pages/childPages/Vehicle";
 
 const API_URL = "https://swapi.co/api";
 
@@ -33,16 +35,23 @@ function App() {
           <Route path="/starships/:id" render={({match}) => (
               <Starship id={match.params.id} apiUrl={API_URL}/>
           )}/>
+          <Route path="/vehicles/:id" render={({match}) => (
+              <Vehicle id={match.params.id} apiUrl={API_URL}/>
+          )}/>
           <Route path="/films/:id" render={({match}) => (
               <Film id={match.params.id} apiUrl={API_URL}/>
           )}/>
 
 
-        <Route exact path="/" render={(props) => <People apiUrl={API_URL}/>} />
+
+
+
+          <Route exact path="/" render={(props) => <People apiUrl={API_URL}/>} />
 
 
         <Route path="/planets" render={(props) => <Planets apiUrl={API_URL}/>} />
         <Route path="/starships" render={(props) => <Starships apiUrl={API_URL}/>} />
+        <Route path="/vehicles" render={(props) => <Vehicles apiUrl={API_URL}/>} />
         <Route path="/films" render={(props) => <Films apiUrl={API_URL}/>} />
 
 

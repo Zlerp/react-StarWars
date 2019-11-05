@@ -6,6 +6,7 @@ import RelatedPlanets from "../../components/Relations/RelatedPlanets";
 import RelatedStarships from "../../components/Relations/RelatedStarships";
 import RelatedPeople from "../../components/Relations/RelatedPeople";
 import './childPages.scss';
+import RelatedVehicles from "../../components/Relations/RelatedVehicles";
 
 class Film extends Component {
 
@@ -76,7 +77,7 @@ class Film extends Component {
                             <RelatedStarships starshipsUrl={this.state.film.starships}/>
                         </TabPanel>
                         <TabPanel>
-                            <h2>Vehicles</h2>
+                            <RelatedVehicles vehiclesUrl={this.state.film.vehicles}/>
                         </TabPanel>
                     </Tabs>
                 </div>
