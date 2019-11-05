@@ -3,8 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-// import RelatedPlanet from "../../components/Relations/RelatedPlanet";
 import RelatedPeople from "../../components/Relations/RelatedPeople";
+import RelatedFilms from "../../components/Relations/RelatedFilms";
 
 
 class Starship extends Component {
@@ -70,7 +70,7 @@ class Starship extends Component {
                             <RelatedPeople peopleUrls={this.state.starship.pilots}/>
                         </TabPanel>
                         <TabPanel>
-                            <h2>Films</h2>
+                            <RelatedFilms filmUrls={this.state.starship.films}/>
                         </TabPanel>
                     </Tabs>
                 </div>

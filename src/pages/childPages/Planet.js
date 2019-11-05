@@ -4,6 +4,8 @@ import axios from 'axios';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import RelatedPeople from "../../components/Relations/RelatedPeople";
+import RelatedFilms from "../../components/Relations/RelatedFilms";
+
 
 
 class Planet extends Component {
@@ -69,7 +71,7 @@ class Planet extends Component {
                             <RelatedPeople peopleUrls={this.state.planet.residents}/>
                         </TabPanel>
                         <TabPanel>
-                            <h2>Films</h2>
+                            <RelatedFilms filmUrls={this.state.planet.films}/>
                         </TabPanel>
                     </Tabs>
                 </div>

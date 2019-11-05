@@ -1,32 +1,31 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import PlanetCards from '../CardList/PlanetCards';
+import FilmCards from '../CardList/FilmCards';
 import 'react-tabs/style/react-tabs.css';
 
 
-class RelatedPlanets extends Component {
+class RelatedFilms extends Component {
 
     constructor(props) {
         super(props);
 
-        this.state = {
-            planets: []
-        };
-        this.requestApi = this.requestApi.bind(this);
 
+        this.requestApi = this.requestApi.bind(this);
+        this.state = {
+            films: [],
+        };
     }
 
 
 
     requestApi(url) {
-        console.log(url);
         axios.get(url).then(response => response.data)
             .then((data) => {
                 this.setState({
-                    planets:  this.state.planets.concat(data),
+                    films:  this.state.films.concat(data),
                 });
-                console.log(this.state.planets);
+                console.log(this.state.films);
             })
     }
 
@@ -34,9 +33,8 @@ class RelatedPlanets extends Component {
 
     componentDidMount() {
         let self = this;
-        console.log(this.props.planetUrls);
-        this.props.planetUrls.map(function(planet, index){
-            self.requestApi(planet)
+        this.props.filmUrls.map(function(film, index){
+            self.requestApi(film);
         });
     }
 
@@ -46,7 +44,7 @@ class RelatedPlanets extends Component {
             <div className="">
                 <div className="container">
                     <div className="row">
-                        <PlanetCards planets={this.state.planets} />
+                        <FilmCards films={this.state.films} />
                     </div>
                 </div>
             </div>
@@ -55,4 +53,4 @@ class RelatedPlanets extends Component {
 
 }
 
-export default RelatedPlanets;
+export default RelatedFilms;

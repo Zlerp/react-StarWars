@@ -5,6 +5,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import RelatedPlanets from "../../components/Relations/RelatedPlanets";
 import RelatedStarships from "../../components/Relations/RelatedStarships";
+import RelatedFilms from "../../components/Relations/RelatedFilms";
 
 
 class Person extends Component {
@@ -66,10 +67,10 @@ class Person extends Component {
                             </React.Fragment>
                         </TabPanel>
                         <TabPanel>
-                            <RelatedPlanets planetUrls={this.state.person.homeworld}/>
+                            <RelatedPlanets planetUrls={[this.state.person.homeworld]}/>
                         </TabPanel>
                         <TabPanel>
-                            <h2>Films</h2>
+                            <RelatedFilms filmUrls={this.state.person.films}/>
                         </TabPanel>
                         <TabPanel>
                             <h2>Species</h2>

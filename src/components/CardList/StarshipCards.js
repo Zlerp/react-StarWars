@@ -8,6 +8,11 @@ import {  Link } from "react-router-dom";
 class StarshipCard extends Component {
 
     renderCard() {
+
+        if (!this.props.starships.length){
+            return (<div className="col text-center"><h2>No Starships</h2></div>    )
+        }
+
         return this.props.starships.map(function(starship, index){
             return (
             <div key={index} className="col-sm-6 col-md-4 col-xl-3 mb-4">
