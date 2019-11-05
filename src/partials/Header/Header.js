@@ -61,6 +61,9 @@ class Header extends Component {
                             <Link onClick={this.toggleNavbar} className='nav-link' to='/vehicles'>
                                 Vehicles
                             </Link>
+                            <Link onClick={this.toggleNavbar} className='nav-link' to='/species'>
+                                Species
+                            </Link>
                             <Link onClick={this.toggleNavbar} className='nav-link' to='/films'>
                                 Films
                             </Link>
