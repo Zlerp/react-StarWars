@@ -13,7 +13,6 @@ class RelatedPeople extends Component {
 
         this.requestApi = this.requestApi.bind(this);
         this.state = {
-            peopleUrls : props.peopleUrls,
             people: [],
         };
     }
@@ -34,7 +33,7 @@ class RelatedPeople extends Component {
 
     componentDidMount() {
         let self = this;
-        this.state.peopleUrls.map(function(person, index){
+        this.props.peopleUrls.map(function(person, index){
             self.requestApi(person);
         });
     }
