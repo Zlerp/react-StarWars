@@ -25,7 +25,7 @@ class PlanetCards extends Component {
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Diameter: <div>{planet.diameter}</div></li>
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Gravity: <div>{planet.gravity}</div></li>
                         </ul>
-                        <Link className="btn btn-primary btn-sm" to={`/planets/${getIdFromURL(planet.url)}`}>
+                        <Link className="btn btn-outline-warning btn-sm" to={`/planets/${getIdFromURL(planet.url)}`}>
                             Go somewhere
                         </Link>
                     </div>

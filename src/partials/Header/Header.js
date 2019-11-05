@@ -33,13 +33,12 @@ class Header extends Component {
     render() {
         return (
             <header>
-                <Navbar expand="lg" bg="dark" variant="dark" fixed="top"className="clear-top">
+                <Navbar expand="lg" bg="dark" variant="dark" fixed="top" className="clear-top">
                     <Navbar.Brand>
                         <Link onClick={this.closeNavbar} to="/">
                             <img
                                 src={logo}
                                 height="30"
-                                width="300"
                                 className="d-inline-block align-top"
                                 alt="React Bootstrap logo"
                             />
@@ -48,7 +47,7 @@ class Header extends Component {
                     <Navbar.Toggle  onClick={this.toggleNavbar} aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ml-auto">
-                            <Link onClick={this.toggleNavbar} className='nav-link' to='/'>
+                            <Link onClick={this.toggleNavbar} className='nav-link' to='/people'>
                                 People
                             </Link>
                             <Link onClick={this.toggleNavbar} className='nav-link' to='/planets'>

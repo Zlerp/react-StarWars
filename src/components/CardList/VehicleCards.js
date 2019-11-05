@@ -27,7 +27,7 @@ class VehicleCards extends Component {
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Passengers: <div>{vehicle.passengers}</div></li>
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Max Speed: <div>{vehicle.max_atmosphering_speed}</div></li>
                         </ul>
-                        <Link className="btn btn-primary btn-sm" to={`/vehicles/${getIdFromURL(vehicle.url)}`}>
+                        <Link className="btn btn-outline-warning btn-sm" to={`/vehicles/${getIdFromURL(vehicle.url)}`}>
                             Go somewhere
                         </Link>
                     </div>

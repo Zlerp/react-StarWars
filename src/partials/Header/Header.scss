@@ -1,12 +1,27 @@
 header {
-  margin-top: 90px;
+  position: fixed;
+  z-index: 2;
+}
+
+header + div {
+  padding-top: 90px;
 }
 
 .clear-top {
-  background-color: black!important;
+  background-color: #000!important;
   .navbar-nav .nav-link {
     color: white;
     text-shadow: 0 0 2px rgba(0,0,0,0.9);
+    transition: color 0.3s;
+    &:hover {
+      color: #ff6
+    }
   }
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: transparent;
+  outline: none;
+  box-shadow: none;
 }
 

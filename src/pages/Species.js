@@ -44,7 +44,11 @@ class Species extends Component {
                 <div className="container">
                     <h1>Species of Starwars</h1>
                     { this.state.loading &&
-                        <h3>LOADING</h3>
+                        <div className="loader">
+                            <div className="inner one" />
+                            <div className="inner two" />
+                            <div className="inner three" />
+                        </div>
                     }
                     {
                         !this.state.loading &&

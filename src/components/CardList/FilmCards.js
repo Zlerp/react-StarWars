@@ -25,7 +25,7 @@ class FilmCards extends Component {
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Episode: <div>{film.episode_id}</div></li>
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Release Date: <div>{film.release_date}</div></li>
                         </ul>
-                        <Link className="btn btn-primary btn-sm" to={`/films/${getIdFromURL(film.url)}`}>
+                        <Link className="btn btn-outline-warning btn-sm" to={`/films/${getIdFromURL(film.url)}`}>
                             Go somewhere
                         </Link>
                     </div>

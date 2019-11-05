@@ -26,7 +26,7 @@ class SpeciesCards extends Component {
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Average Height: <div>{specimen.average_height}</div></li>
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Average Lifespan: <div>{specimen.average_lifespan}</div></li>
                         </ul>
-                        <Link className="btn btn-primary btn-sm" to={`/species/${getIdFromURL(specimen.url)}`}>
+                        <Link className="btn btn-outline-warning btn-sm" to={`/species/${getIdFromURL(specimen.url)}`}>
                             Go somewhere
                         </Link>
                     </div>

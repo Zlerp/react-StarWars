@@ -27,7 +27,7 @@ class PersonCard extends Component {
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Gender:  <div>{person.gender}</div> </li>
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Height:  <div>{person.height}</div> </li>
                         </ul>
-                        <Link className="btn btn-primary btn-sm" to={`/people/${getIdFromURL(person.url)}`}>
+                        <Link className="btn btn-outline-warning btn-sm" to={`/people/${getIdFromURL(person.url)}`}>
                             Go somewhere
                         </Link>
                     </div>
