@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './CardList.scss';
+import {getIdFromURL} from "../../helpers/helpers";
+import {  Link } from "react-router-dom";
 
 
 
@@ -20,7 +22,9 @@ class StarshipCard extends Component {
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Passengers: <div>{starship.passengers}</div></li>
                             <li className="py-1 px-0 list-group-item d-flex justify-content-between">Hyperdrive Rating: <div>{starship.hyperdrive_rating}</div></li>
                         </ul>
-                        <div className="btn btn-primary btn-sm">Go somewhere</div>
+                        <Link className="btn btn-primary btn-sm" to={`/starships/${getIdFromURL(starship.url)}`}>
+                            Go somewhere
+                        </Link>
                     </div>
                 </div>
             </div>

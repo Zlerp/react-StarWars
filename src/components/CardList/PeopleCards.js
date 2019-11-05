@@ -10,7 +10,7 @@ class PersonCard extends Component {
     renderCard() {
 
         if (!this.props.people.length) {
-            return <div className="col text-center"><h2>No Residents</h2></div>
+            return <div className="col text-center"><h2>No People</h2></div>
         }
         return this.props.people.map(function(person, index){
             return (

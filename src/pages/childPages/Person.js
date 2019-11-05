@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import RelatedPlanet from "../../components/Relations/RelatedPlanet";
+import RelatedStarships from "../../components/Relations/RelatedStarships";
 // import RelatedPeople from "../../components/Relations/RelatedPeople";
 
 
@@ -55,7 +56,6 @@ class Person extends Component {
                         </TabList>
 
                         <TabPanel>
-                            <h2>Details</h2>
                             <React.Fragment>
                                 <div>  Birth Year: {this.state.person.birth_year}</div>
                                 <div>Height: {this.state.person.height}</div>
@@ -76,7 +76,7 @@ class Person extends Component {
                             <h2>Species</h2>
                         </TabPanel>
                         <TabPanel>
-                            <h2>Starships</h2>
+                            <RelatedStarships starshipsUrl={this.state.person.starships}/>
                         </TabPanel>
                         <TabPanel>
                             <h2>Vehicles</h2>
