@@ -12,7 +12,7 @@ class Header extends Component {
         this.toggleNavbar = this.toggleNavbar.bind(this);
         this.closeNavbar = this.closeNavbar.bind(this);
         this.state = {
-            collapsed: true
+            collapsed: false
         };
     }
 
@@ -23,17 +23,15 @@ class Header extends Component {
     }
 
     closeNavbar() {
-        if (this.state.collapsed){
-            this.setState({
-                collapsed: !this.state.collapsed
-            });
-        }
+        this.setState({
+            collapsed: false
+        });
     }
 
     render() {
         return (
             <header>
-                <Navbar expand="lg" bg="dark" variant="dark" fixed="top" className="clear-top">
+                <Navbar expand="lg" bg="dark" variant="dark" fixed="top" className="clear-top" expanded={this.state.collapsed}>
                     <Navbar.Brand>
                         <Link onClick={this.closeNavbar} to="/">
                             <img
@@ -47,22 +45,22 @@ class Header extends Component {
                     <Navbar.Toggle  onClick={this.toggleNavbar} aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ml-auto">
-                            <Link onClick={this.toggleNavbar} className='nav-link' to='/people'>
+                            <Link onClick={this.closeNavbar} className='nav-link' to='/people'>
                                 People
                             </Link>
-                            <Link onClick={this.toggleNavbar} className='nav-link' to='/planets'>
+                            <Link onClick={this.closeNavbar} className='nav-link' to='/planets'>
                                 Planets
                             </Link>
-                            <Link onClick={this.toggleNavbar} className='nav-link' to='/starships'>
+                            <Link onClick={this.closeNavbar} className='nav-link' to='/starships'>
                                 Starships
                             </Link>
-                            <Link onClick={this.toggleNavbar} className='nav-link' to='/vehicles'>
+                            <Link onClick={this.closeNavbar} className='nav-link' to='/vehicles'>
                                 Vehicles
                             </Link>
-                            <Link onClick={this.toggleNavbar} className='nav-link' to='/species'>
+                            <Link onClick={this.closeNavbar} className='nav-link' to='/species'>
                                 Species
                             </Link>
-                            <Link onClick={this.toggleNavbar} className='nav-link' to='/films'>
+                            <Link onClick={this.closeNavbar} className='nav-link' to='/films'>
                                 Films
                             </Link>
                         </Nav>
