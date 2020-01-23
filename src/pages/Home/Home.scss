@@ -174,3 +174,14 @@
 
 
 
+@media (max-width: 575px) {
+  .starwars {
+    .intro {
+      font-size: 100%;
+      white-space: nowrap;
+    }
+    .titles {
+      font-size: 150%;
+    }
+  }
+}
