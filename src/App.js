@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter , Route, Switch } from "react-router-dom";
 import './App.scss';
 
 import Header from './partials/Header/Header';
@@ -24,7 +24,7 @@ const API_URL = "https://swapi.co/api";
 
 function App() {
   return (
-  <Router>
+  <HashRouter basename="/">
     <div className="App">
         <div className="stars-wrapper">
             <div id='stars' />
@@ -69,7 +69,7 @@ function App() {
 
       </Switch>
     </div>
-  </Router>
+  </HashRouter>
   );
 }
 
