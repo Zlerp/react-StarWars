@@ -25,6 +25,7 @@ const API_URL = "https://swapi.co/api";
 function App() {
   return (
   <HashRouter basename="/">
+      {/*GITHUB PAGES TEST*/}
     <div className="App">
         <div className="stars-wrapper">
             <div id='stars' />
