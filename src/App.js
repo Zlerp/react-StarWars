@@ -18,7 +18,7 @@ import Species from "./pages/Species";
 import Specimen from "./pages/childPages/Specimen";
 import Home from "./pages/Home/Home";
 
-const API_URL = "https://swapi.co/api";
+const API_URL = "https://swapi.dev/api";
 
 
 
