@@ -22,7 +22,7 @@ body {
 
 .App-header {
   background-color: #000;
-  min-height: 100vh;
+  //min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,10 +63,11 @@ body {
 
 .stars-wrapper {
   position: fixed;
-  height:100vh;
+  height: 100%;
   width: 100vw;
-  top:0;
+  top: 0;
   left: 0;
+  box-sizing: border-box;
 }
 
 #stars {
