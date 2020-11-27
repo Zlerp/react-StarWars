@@ -21,7 +21,8 @@ class People extends Component {
                     count: data.count,
                 }));
                 if (data.next) {
-                    this.requestApi(data.next);
+                    let nextUrl = data.next.replace(/^http:\/\//i, 'https://');
+                    this.requestApi(nextUrl);
                 } else {
                     this.setState({
                         loading: false
