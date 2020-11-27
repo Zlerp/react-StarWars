@@ -58,7 +58,7 @@ class Person extends Component {
                                 <div>  Birth Year: {this.state.person.birth_year}</div>
                                 <div>Height: {this.state.person.height}</div>
                                 <div>Mass: {this.state.person.mass}</div>
-                                <div>Hair Color: {this.state.person.hair_color}</div>eplac
+                                <div>Hair Color: {this.state.person.hair_color}</div>
                                 <div>Eye Color: {this.state.person.eye_color}</div>
                                 <div>Gender: {this.state.person.gender}</div>
                                 <div>Skin Color: {this.state.person.skin_color}</div>
