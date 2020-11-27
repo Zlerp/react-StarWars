@@ -34,7 +34,7 @@ class Person extends Component {
 
 
     componentDidMount() {
-        this.requestApi(`${this.props.apiUrl}/people/${this.props.id}`.replace(/^http:\/\//i, 'https://'));
+        this.requestApi('https://swapi.dev/api/people/3'));
     }
 
 
