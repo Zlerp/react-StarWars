@@ -18,7 +18,8 @@ class RelatedFilms extends Component {
 
 
     requestApi(url) {
-        axios.get(url).then(response => response.data)
+        let httpsUrl = url.replace(/^http:\/\//i, 'https://');
+        axios.get(httpsUrl).then(response => response.data)
             .then((data) => {
                 this.setState({
                     films:  this.state.films.concat(data),
