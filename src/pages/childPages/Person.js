@@ -34,7 +34,7 @@ class Person extends Component {
 
 
     componentDidMount() {
-        this.requestApi('https://swapi.dev/api/people/3'));
+        this.requestApi('https://swapi.dev/api/people/3');
     }
 
 
