@@ -33,7 +33,7 @@ class People extends Component {
 
 
     componentDidMount() {
-        this.requestApi(`${this.props.apiUrl}/people/`);
+        this.requestApi(`${this.props.apiUrl}/people/`.replace(/^http:\/\//i, 'https://'));
     }
 
 
