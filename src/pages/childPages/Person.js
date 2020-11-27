@@ -23,9 +23,8 @@ class Person extends Component {
 
 
     requestApi(url) {
-        let httpsUrl = url.replace(/^http:\/\//i, 'https://');
-        console.log(url, httpsUrl);
-        axios.get(httpsUrl).then(response => response.data)
+        console.log(url);
+        axios.get(url).then(response => response.data)
             .then((data) => {
                 this.setState({
                     person:  data,
@@ -35,7 +34,7 @@ class Person extends Component {
 
 
     componentDidMount() {
-        this.requestApi(`${this.props.apiUrl}/people/${this.props.id}`);
+        this.requestApi(`${this.props.apiUrl}/people/${this.props.id}`.replace(/^http:\/\//i, 'https://'));
     }
 
 
