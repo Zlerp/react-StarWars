@@ -21,7 +21,8 @@ class Planet extends Component {
 
 
     requestApi(url) {
-        axios.get(url).then(response => response.data)
+        let httpsUrl = url.replace(/^http:\/\//i, 'https://');
+        axios.get(httpsUrl).then(response => response.data)
             .then((data) => {
                 this.setState({
                     planet:  data,
